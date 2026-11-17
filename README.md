@@ -2,7 +2,7 @@
 
 지미니스가 만든 토스 미니앱을 소개하는 GitHub Pages 페이지예요.
 
-- 페이지: https://seungjinhan.github.io/potfolio_app/
+- 페이지: https://seungjinhan.github.io/portfolio_app/
 - 디자인: [TypeUI Doodle](https://www.typeui.sh/design-skills/doodle) 손그림 스타일을 참고했어요.
 
 ## 파일
