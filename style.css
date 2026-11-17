@@ -451,6 +451,31 @@ a { color: inherit; }
 }
 .card-link { align-self: flex-start; }
 
+/* ---------- upcoming apps ---------- */
+.section-soon { padding-top: 0; }
+.section-soon::before {
+  content: "";
+  display: block;
+  margin-bottom: 72px;
+  border-top: 3px dashed var(--dots);
+}
+.card.soon { border-style: dashed; box-shadow: var(--shadow-md); }
+.card.soon:hover { box-shadow: var(--shadow-lg); }
+.stamp {
+  align-self: flex-start;
+  padding: 6px 18px;
+  border: 3px solid #b4483c;
+  border-radius: var(--r-c);
+  color: #b4483c;
+  font-family: var(--hand);
+  font-weight: 700;
+  font-size: 23px;
+  letter-spacing: -0.08em;
+  word-spacing: 0.15em;
+  line-height: 1.2;
+  transform: rotate(-4deg);
+}
+
 /* ---------- how ---------- */
 .how-band {
   background: var(--paper-2);
@@ -518,6 +543,8 @@ a { color: inherit; }
   .stat strong { font-size: 34px; }
   .stat span { font-size: 16px; }
   .section { padding-top: 56px; padding-bottom: 64px; }
+  .section-soon { padding-top: 0; }
+  .section-soon::before { margin-bottom: 48px; }
   .cards { grid-template-columns: 1fr; }
   .card, .card:nth-child(odd), .card:nth-child(even) { transform: none; }
 }
