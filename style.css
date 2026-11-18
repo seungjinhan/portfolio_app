@@ -61,9 +61,9 @@ img { display: block; max-width: 100%; }
 :root:lang(vi), :root:lang(th) { --hand: "Mali", "Gaegu", cursive; }
 /* keep-all은 띄어쓰기 없는 일본어·중국어 문장을 줄바꿈하지 못해요. */
 :root:lang(ja) body, :root:lang(zh) body { word-break: normal; }
-.card h3, .tile span { word-break: keep-all; }
+.card h3, .card h4, .tile span { word-break: keep-all; }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   margin: 0;
   color: var(--heading);
   font-family: var(--hand);
@@ -319,9 +319,12 @@ a { color: inherit; }
   background: var(--brand);
 }
 .board-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+  --per-row: 5;
+  --gap: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--gap);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -340,6 +343,7 @@ a { color: inherit; }
   text-decoration: none;
   transition: transform .15s var(--ease), box-shadow .15s var(--ease);
 }
+.board-grid li { flex: 0 0 calc((100% - (var(--per-row) - 1) * var(--gap)) / var(--per-row)); }
 .board-grid li:nth-child(odd) .tile { transform: rotate(-1.5deg); }
 .board-grid li:nth-child(even) .tile { transform: rotate(1.2deg); }
 .board-grid li:nth-child(4n+2) .tile { border-radius: var(--r-a); }
@@ -368,7 +372,7 @@ a { color: inherit; }
 }
 .stats {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
   gap: 24px;
   margin: 0 auto;
   list-style: none;
@@ -377,6 +381,7 @@ a { color: inherit; }
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 16px;
   background: var(--paper);
   border: var(--line);
@@ -384,7 +389,6 @@ a { color: inherit; }
   box-shadow: var(--shadow-md);
 }
 .stat:nth-child(2) { border-radius: var(--r-b); transform: rotate(-1deg); }
-.stat:nth-child(3) { border-radius: var(--r-c); transform: rotate(.8deg); }
 .stat strong {
   font-family: var(--hand);
   font-size: 44px;
@@ -399,6 +403,33 @@ a { color: inherit; }
   word-spacing: var(--hand-ws);
   color: var(--heading);
 }
+
+.stat-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  gap: 4px 12px;
+  margin: 0;
+}
+.cat-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 10px 0 4px;
+  padding: 0;
+  list-style: none;
+}
+.cat-links .chip {
+  margin: 0;
+  padding: 2px 12px;
+  background: var(--white);
+  font-size: 14px;
+  text-decoration: none;
+  transition: transform .15s var(--ease), box-shadow .15s var(--ease), background .15s var(--ease);
+}
+.cat-links .chip:hover { background: var(--brand); transform: translate(-1px, -2px); box-shadow: var(--shadow-xs); }
 
 /* ---------- sections ---------- */
 .section { padding-top: 80px; padding-bottom: 88px; }
@@ -415,6 +446,30 @@ a { color: inherit; }
 .section-lead b { color: var(--heading); }
 
 /* ---------- app cards ---------- */
+.cat-group { margin-top: 56px; }
+.cat-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 30px;
+  letter-spacing: var(--hand-ls-lg);
+}
+.cat-count {
+  display: inline-grid;
+  place-items: center;
+  min-width: 32px;
+  height: 32px;
+  padding: 0 8px;
+  background: var(--brand);
+  border: 2px solid var(--ink);
+  border-radius: 9999px;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.cat-group .cards { margin-top: 20px; }
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -469,7 +524,7 @@ a { color: inherit; }
   object-fit: cover;
   background: var(--white);
 }
-.card h3 { font-size: 32px; letter-spacing: -0.05em; }
+.card h3, .card h4 { font-size: 32px; letter-spacing: -0.05em; }
 .tagline {
   margin: 20px 0 0;
   padding-bottom: 12px;
@@ -586,7 +641,7 @@ a { color: inherit; }
   .brand-name { font-size: 22px; }
   .lead { font-size: 16px; }
   .board { padding: 16px 12px; transform: none; }
-  .board-grid { gap: 8px; }
+  .board-grid { --per-row: 4; --gap: 8px; }
   .tile { padding: 8px 2px; }
   .tile img { width: 44px; height: 44px; border-radius: 11px; }
   .tile span { font-size: 11px; }
@@ -594,6 +649,9 @@ a { color: inherit; }
   .stat { padding: 12px 4px; }
   .stat strong { font-size: 34px; }
   .stat span { font-size: 16px; }
+  .cat-links .chip { padding: 1px 10px; font-size: 13px; }
+  .cat-group { margin-top: 40px; }
+  .cat-title { font-size: 26px; }
   .section { padding-top: 56px; padding-bottom: 64px; }
   .section-sub { padding-top: 0; }
   .section-sub::before { margin-bottom: 48px; }

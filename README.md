@@ -17,16 +17,16 @@
 ## 앱을 추가할 때
 
 1. 앱 아이콘을 `assets/icons/{appName}.png`로 넣어요. (`sips -Z 240 파일.png`)
-2. `index.html`의 `.cards`에 카드 하나를 복사해 이름, 카테고리, 설명, 링크를 바꿔요.
-   링크는 `https://tossminiapp.com/d/{appName}`이에요. 앱이 출시돼야 열려요.
+2. `index.html`의 `#apps`에서 앱의 카테고리 묶음(`.cat-group`, 예: `#cat-edu`) 안 `.cards`에 카드 하나를 복사해 이름, 설명, 링크를 바꾸고, 묶음 제목의 숫자(`.cat-count`)를 고쳐요.
+   카드 제목은 `h4`예요 (카테고리 제목이 `h3`). 링크는 `https://tossminiapp.com/d/{appName}`이에요. 앱이 출시돼야 열려요.
    한 줄 소개와 기능의 `data-i18n` 키도 `{appName}.t`, `{appName}.f1`~`f3`으로 바꿔요.
-3. 첫 화면의 `.board-grid`에 타일을 하나 더하고, 숫자(`출시한 앱 · 9`, 통계)를 고쳐요.
-4. `i18n.js`의 8개 언어마다 새 키의 번역을 넣고, 숫자가 들어간 글(`desc`, `heroLead`, `boardPill`)도 고쳐요.
+3. 새 카테고리면 `.cat-group`을 하나 더 만들고, 위쪽 통계의 카테고리 칩(`.cat-links`)과 숫자도 더해요. 카테고리 이름은 `cat…` 키로 번역해요.
+4. 첫 화면의 `.board-grid`에 타일을 하나 더하고, 숫자(`출시한 앱 · 10`, 통계)를 고쳐요. 타일은 한 줄에 5개(휴대폰 4개)씩 놓이고 마지막 줄은 가운데로 모여요.
+5. `i18n.js`의 8개 언어마다 새 키의 번역을 넣고, 숫자가 들어간 글(`desc`, `heroLead`, `boardPill`)도 고쳐요.
    번역이 빠진 키는 한국어로 나와요.
 
-출시 전 앱은 `#soon`(준비 중인 앱) 섹션에 `card soon` 카드로 넣고, 버튼 대신 `준비 중` 도장을 달아요.
-출시되면 카드를 `#apps`로 옮기고 `soon` 클래스와 도장을 버튼으로 바꿔요.
-지금 준비 중인 앱: 캠핑카라이프(`camping-car-life`).
+지금은 준비 중인 앱이 없어서 `#soon`(준비 중인 앱) 섹션을 뺐어요. 다시 넣을 때는 `#games`와 같은 모양의 `section-sub` 섹션에 `card soon` 카드를 두고, 버튼 대신 `<span class="stamp" data-i18n="soonStamp">준비 중</span>`을 달아요.
+섹션 글 번역(`soonTag`, `soonTitle`, `soonLead`, `soonStamp`)과 스타일(`.card.soon`, `.stamp`)은 남겨 뒀어요. 출시되면 카드를 `#apps`의 카테고리 묶음으로 옮기고 도장을 버튼으로 바꿔요.
 
 웹에서 해 볼 수 있는 게임은 `#games`(게임) 섹션에 넣고, `웹에서 해보기` 버튼(번역 키 `playWeb`)으로 웹 게임에 연결해요.
 
@@ -35,7 +35,7 @@
 | 미로찾기 (`maze-game`) | https://seungjinhan.github.io/maze-game/ |
 | 생활 리듬 (`life-rhythm`) | https://seungjinhan.github.io/life-rhythm/ |
 
-게임이 토스에 출시되면 카드를 `#apps`로 옮기고 버튼을 `토스에서 보기`로 바꿔요.
+게임이 토스에 출시되면 카드를 `#apps`의 게임 카테고리 묶음(없으면 새로)으로 옮기고 버튼을 `토스에서 보기`로 바꿔요.
 
 ## 언어
 
