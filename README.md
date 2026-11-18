@@ -25,8 +25,9 @@
 5. `i18n.js`의 8개 언어마다 새 키의 번역을 넣고, 숫자가 들어간 글(`desc`, `heroLead`, `boardPill`)도 고쳐요.
    번역이 빠진 키는 한국어로 나와요.
 
-지금은 준비 중인 앱이 없어서 `#soon`(준비 중인 앱) 섹션을 뺐어요. 다시 넣을 때는 `#games`와 같은 모양의 `section-sub` 섹션에 `card soon` 카드를 두고, 버튼 대신 `<span class="stamp" data-i18n="soonStamp">준비 중</span>`을 달아요.
-섹션 글 번역(`soonTag`, `soonTitle`, `soonLead`, `soonStamp`)과 스타일(`.card.soon`, `.stamp`)은 남겨 뒀어요. 출시되면 카드를 `#apps`의 카테고리 묶음으로 옮기고 도장을 버튼으로 바꿔요.
+출시 전 앱은 `#soon`(준비 중인 앱) 섹션에 `card soon` 카드로 넣고, 버튼 대신 `<span class="stamp" data-i18n="soonStamp">준비 중</span>`을 달아요.
+출시되면 카드를 `#apps`의 카테고리 묶음으로 옮기고 도장을 버튼으로 바꿔요. 준비 중인 앱이 없으면 섹션째 빼요.
+지금 준비 중인 앱: 영어 100일(`english-edu`, 이름은 아직 임시). 아이콘 `assets/icons/english-edu.svg`는 임시로 그린 것이라 앱 로고가 생기면 png로 바꿔요.
 
 웹에서 해 볼 수 있는 게임은 `#games`(게임) 섹션에 넣고, `웹에서 해보기` 버튼(번역 키 `playWeb`)으로 웹 게임에 연결해요.
 

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+  <!-- 임시 아이콘이에요. 영어 100일 앱 로고가 생기면 png로 바꿔요. -->
+  <rect width="240" height="240" fill="#cfe0fb"/>
+  <path d="M38 62c-1-17 10-27 28-27h110c17 0 28 10 27 27l-1 58c0 16-10 25-27 25h-58l-36 32 7-32H66c-17 0-28-9-28-25z" fill="#fff" stroke="#111827" stroke-width="8" stroke-linejoin="round"/>
+  <text x="121" y="114" text-anchor="middle" font-family="'Arial Rounded MT Bold', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="58" fill="#2f6fde">Hi!</text>
+  <path d="M138 199c1-16 19-26 41-25 22 0 40 11 39 26-1 15-19 24-41 23-22 0-40-9-39-24z" fill="#f6e3a7" stroke="#111827" stroke-width="6" stroke-linejoin="round"/>
+  <text x="178" y="209" text-anchor="middle" font-family="'Arial Rounded MT Bold', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="26" fill="#111827">100</text>
+</svg>
