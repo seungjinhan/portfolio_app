@@ -319,7 +319,7 @@ a { color: inherit; }
   background: var(--brand);
 }
 .board-grid {
-  --per-row: 5;
+  --per-row: 4;
   --gap: 12px;
   display: flex;
   flex-wrap: wrap;
@@ -641,7 +641,7 @@ a { color: inherit; }
   .brand-name { font-size: 22px; }
   .lead { font-size: 16px; }
   .board { padding: 16px 12px; transform: none; }
-  .board-grid { --per-row: 4; --gap: 8px; }
+  .board-grid { --gap: 8px; }
   .tile { padding: 8px 2px; }
   .tile img { width: 44px; height: 44px; border-radius: 11px; }
   .tile span { font-size: 11px; }
