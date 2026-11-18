@@ -499,13 +499,12 @@ a { color: inherit; }
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 12'%3E%3Cpath d='M1.5 6.5c1.6 1.2 2.9 2.6 4 4.2C8 6.6 11 3.4 14.5 1.2' fill='none' stroke='%23111827' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center / contain;
 }
 .card-link { align-self: flex-start; }
-.card-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; }
-.card-foot > .stamp, .card-foot > .card-link { align-self: center; }
-.card-foot > .card-link { padding-left: 16px; padding-right: 16px; }
+/* 웹에서 해보기 문구가 좁은 카드에서도 한 줄에 들어가게 좌우 여백을 줄여요. */
+#games .card-link { padding-left: 16px; padding-right: 16px; }
 
-/* ---------- upcoming apps ---------- */
-.section-soon { padding-top: 0; }
-.section-soon::before {
+/* ---------- games & upcoming apps ---------- */
+.section-sub { padding-top: 0; }
+.section-sub::before {
   content: "";
   display: block;
   margin-bottom: 72px;
@@ -596,8 +595,8 @@ a { color: inherit; }
   .stat strong { font-size: 34px; }
   .stat span { font-size: 16px; }
   .section { padding-top: 56px; padding-bottom: 64px; }
-  .section-soon { padding-top: 0; }
-  .section-soon::before { margin-bottom: 48px; }
+  .section-sub { padding-top: 0; }
+  .section-sub::before { margin-bottom: 48px; }
   .cards { grid-template-columns: 1fr; }
   .card, .card:nth-child(odd), .card:nth-child(even) { transform: none; }
 }

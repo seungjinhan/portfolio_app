@@ -28,6 +28,7 @@
       </a>
       <nav class="nav" aria-label="페이지 메뉴" data-i18n-aria="navAria">
         <a href="#apps" data-i18n="navApps">만든 앱</a>
+        <a href="#games" data-i18n="navGames">게임</a>
         <a href="#how" data-i18n="navHow">여는 방법</a>
       </nav>
       <label class="lang" hidden>
@@ -239,7 +240,49 @@
       </div>
     </section>
 
-    <section id="soon" class="section section-soon wrap" aria-labelledby="soon-title">
+    <section id="games" class="section section-sub wrap" aria-labelledby="games-title">
+      <span class="tag" data-i18n="gamesTag">웹에서 바로</span>
+      <h2 id="games-title" data-i18n="gamesTitle">게임</h2>
+      <p class="section-lead" data-i18n="gamesLead">설치 없이 브라우저에서 바로 해 볼 수 있어요. 토스 출시도 준비하고 있어요.</p>
+
+      <div class="cards">
+        <article class="card" id="app-maze-game" style="--accent:#bfe3f2">
+          <div class="card-head">
+            <img class="icon" src="assets/icons/maze-game.png" alt="미로찾기 아이콘" width="72" height="72">
+            <div>
+              <h3>미로찾기</h3>
+              <span class="chip" data-i18n="catGame">게임</span>
+            </div>
+          </div>
+          <p class="tagline" data-i18n="maze-game.t">미로에 갇힌 가족 여섯을 구하는 미로 게임</p>
+          <ul class="features">
+            <li data-i18n="maze-game.f1">등급이 오를수록 화면에 보이는 미로가 좁아져요</li>
+            <li data-i18n="maze-game.f2">다섯 등급마다 다른 미로 50단계를 풀어요</li>
+            <li data-i18n="maze-game.f3">다섯 등급을 다 깨면 숨어 있던 우주 미로가 열려요</li>
+          </ul>
+          <a class="btn card-link" href="https://seungjinhan.github.io/maze-game/" target="_blank" rel="noopener" data-i18n="playWeb">웹에서 해보기 <span aria-hidden="true">→</span><span class="sr">(새 창)</span></a>
+        </article>
+
+        <article class="card" id="app-life-rhythm" style="--accent:#d9cdf0">
+          <div class="card-head">
+            <img class="icon" src="assets/icons/life-rhythm.png" alt="생활 리듬 아이콘" width="72" height="72">
+            <div>
+              <h3>생활 리듬</h3>
+              <span class="chip" data-i18n="catGame">게임</span>
+            </div>
+          </div>
+          <p class="tagline" data-i18n="life-rhythm.t">집 안 물건을 두드려 리듬을 따라 치는 게임</p>
+          <ul class="features">
+            <li data-i18n="life-rhythm.f1">들려준 2마디 리듬을 그대로 따라 쳐요</li>
+            <li data-i18n="life-rhythm.f2">스위치, 냄비 같은 방식마다 30단계가 있어요</li>
+            <li data-i18n="life-rhythm.f3">인터넷 없이도 할 수 있어요</li>
+          </ul>
+          <a class="btn card-link" href="https://seungjinhan.github.io/life-rhythm/" target="_blank" rel="noopener" data-i18n="playWeb">웹에서 해보기 <span aria-hidden="true">→</span><span class="sr">(새 창)</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section id="soon" class="section section-sub wrap" aria-labelledby="soon-title">
       <span class="tag" data-i18n="soonTag">곧 만나요</span>
       <h2 id="soon-title" data-i18n="soonTitle">준비 중인 앱</h2>
       <p class="section-lead" data-i18n="soonLead">아직 토스에 출시되지 않은 앱이에요. 출시되면 여기에도 <b>토스에서 보기</b> 링크가 생겨요.</p>
@@ -260,26 +303,6 @@
             <li data-i18n="camping-car-life.f3">축제와 그 주변 차박지를 함께 봐요</li>
           </ul>
           <span class="stamp" data-i18n="soonStamp">준비 중</span>
-        </article>
-
-        <article class="card soon" id="app-life-rhythm" style="--accent:#d9cdf0">
-          <div class="card-head">
-            <img class="icon" src="assets/icons/life-rhythm.png" alt="생활 리듬 아이콘" width="72" height="72">
-            <div>
-              <h3>생활 리듬</h3>
-              <span class="chip" data-i18n="catGame">게임</span>
-            </div>
-          </div>
-          <p class="tagline" data-i18n="life-rhythm.t">집 안 물건을 두드려 리듬을 따라 치는 게임</p>
-          <ul class="features">
-            <li data-i18n="life-rhythm.f1">들려준 2마디 리듬을 그대로 따라 쳐요</li>
-            <li data-i18n="life-rhythm.f2">스위치, 냄비 같은 방식마다 30단계가 있어요</li>
-            <li data-i18n="life-rhythm.f3">인터넷 없이도 할 수 있어요</li>
-          </ul>
-          <div class="card-foot">
-            <span class="stamp" data-i18n="soonStamp">준비 중</span>
-            <a class="btn card-link" href="https://seungjinhan.github.io/life-rhythm/" target="_blank" rel="noopener" data-i18n="playWeb">웹에서 해보기 <span aria-hidden="true">→</span><span class="sr">(새 창)</span></a>
-          </div>
         </article>
       </div>
     </section>

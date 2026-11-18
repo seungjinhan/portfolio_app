@@ -26,9 +26,16 @@
 
 출시 전 앱은 `#soon`(준비 중인 앱) 섹션에 `card soon` 카드로 넣고, 버튼 대신 `준비 중` 도장을 달아요.
 출시되면 카드를 `#apps`로 옮기고 `soon` 클래스와 도장을 버튼으로 바꿔요.
-지금 준비 중인 앱: 캠핑카라이프(`camping-car-life`), 생활 리듬(`life-rhythm`).
-웹에서 먼저 해 볼 수 있는 앱은 도장 옆에 `웹에서 해보기` 버튼(`.card-foot` 안, 번역 키 `playWeb`)을 달아요.
-생활 리듬은 웹 게임 https://seungjinhan.github.io/life-rhythm/ 으로 연결돼요.
+지금 준비 중인 앱: 캠핑카라이프(`camping-car-life`).
+
+웹에서 해 볼 수 있는 게임은 `#games`(게임) 섹션에 넣고, `웹에서 해보기` 버튼(번역 키 `playWeb`)으로 웹 게임에 연결해요.
+
+| 게임 | 웹 주소 |
+|---|---|
+| 미로찾기 (`maze-game`) | https://seungjinhan.github.io/maze-game/ |
+| 생활 리듬 (`life-rhythm`) | https://seungjinhan.github.io/life-rhythm/ |
+
+게임이 토스에 출시되면 카드를 `#apps`로 옮기고 버튼을 `토스에서 보기`로 바꿔요.
 
 ## 언어
 
