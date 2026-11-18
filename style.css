@@ -499,6 +499,8 @@ a { color: inherit; }
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 12'%3E%3Cpath d='M1.5 6.5c1.6 1.2 2.9 2.6 4 4.2C8 6.6 11 3.4 14.5 1.2' fill='none' stroke='%23111827' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center / contain;
 }
 .card-link { align-self: flex-start; }
+.card-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; }
+.card-foot > .stamp, .card-foot > .card-link { align-self: center; }
 
 /* ---------- upcoming apps ---------- */
 .section-soon { padding-top: 0; }
