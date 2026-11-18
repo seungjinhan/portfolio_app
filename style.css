@@ -501,6 +501,7 @@ a { color: inherit; }
 .card-link { align-self: flex-start; }
 .card-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; }
 .card-foot > .stamp, .card-foot > .card-link { align-self: center; }
+.card-foot > .card-link { padding-left: 16px; padding-right: 16px; }
 
 /* ---------- upcoming apps ---------- */
 .section-soon { padding-top: 0; }
