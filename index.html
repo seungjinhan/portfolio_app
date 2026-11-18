@@ -15,38 +15,45 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Gaegu:wght@400;700&display=swap">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
   <link rel="stylesheet" href="style.css">
+  <script src="i18n.js" defer></script>
 </head>
 <body>
-  <a class="skip" href="#apps">앱 목록으로 건너뛰기</a>
+  <a class="skip" href="#apps" data-i18n="skip">앱 목록으로 건너뛰기</a>
 
   <header class="topbar">
     <div class="topbar-inner">
-      <a class="brand" href="#top" aria-label="지미니스 처음으로">
+      <a class="brand" href="#top" aria-label="지미니스 처음으로" data-i18n-aria="brandAria">
         <span class="brand-mark" aria-hidden="true">지</span>
         <span class="brand-name">지미니스</span>
       </a>
-      <nav class="nav" aria-label="페이지 메뉴">
-        <a href="#apps">만든 앱</a>
-        <a href="#how">여는 방법</a>
+      <nav class="nav" aria-label="페이지 메뉴" data-i18n-aria="navAria">
+        <a href="#apps" data-i18n="navApps">만든 앱</a>
+        <a href="#how" data-i18n="navHow">여는 방법</a>
       </nav>
+      <label class="lang" hidden>
+        <svg class="lang-globe" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z"/></svg>
+        <span class="lang-code" aria-hidden="true">KO</span>
+        <svg class="lang-caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg>
+        <select aria-label="언어" data-i18n-aria="langLabel"></select>
+      </label>
     </div>
   </header>
 
   <main id="top">
     <section class="hero wrap">
       <div class="hero-copy">
-        <span class="tag">토스 미니앱 포트폴리오</span>
-        <h1>설치 없이 <em>바로</em> 쓰는<br>작은 앱들을 만들어요</h1>
-        <p class="lead">환율 계산부터 핸드드립 레시피까지, 지미니스가 만든 토스 미니앱 9개예요. 토스 앱만 있으면 따로 설치하지 않고 바로 열 수 있어요.</p>
+        <span class="tag" data-i18n="heroTag">토스 미니앱 포트폴리오</span>
+        <h1 data-i18n="heroTitle">설치 없이 <em>바로</em> 쓰는<br>작은 앱들을 만들어요</h1>
+        <p class="lead" data-i18n="heroLead">환율 계산부터 핸드드립 레시피까지, 지미니스가 만든 토스 미니앱 9개예요. 토스 앱만 있으면 따로 설치하지 않고 바로 열 수 있어요.</p>
         <div class="actions">
-          <a class="btn btn-brand" href="#apps">앱 둘러보기</a>
-          <a class="btn" href="#how">여는 방법</a>
+          <a class="btn btn-brand" href="#apps" data-i18n="heroBrowse">앱 둘러보기</a>
+          <a class="btn" href="#how" data-i18n="navHow">여는 방법</a>
         </div>
       </div>
 
-      <div class="board" aria-label="출시한 앱 바로가기">
+      <div class="board" aria-label="출시한 앱 바로가기" data-i18n-aria="boardAria">
         <div class="board-head">
-          <span class="pill">출시한 앱 · 9</span>
+          <span class="pill" data-i18n="boardPill">출시한 앱 · 9</span>
           <span class="dot" aria-hidden="true"></span>
         </div>
         <ul class="board-grid">
@@ -63,18 +70,18 @@
       </div>
     </section>
 
-    <section class="stats-band" aria-label="한눈에 보기">
+    <section class="stats-band" aria-label="한눈에 보기" data-i18n-aria="statsAria">
       <ul class="stats wrap">
-        <li class="stat"><strong>9</strong><span>출시한 미니앱</span></li>
-        <li class="stat"><strong>6</strong><span>카테고리</span></li>
-        <li class="stat"><strong>0</strong><span>설치할 것</span></li>
+        <li class="stat"><strong>9</strong><span data-i18n="statApps">출시한 미니앱</span></li>
+        <li class="stat"><strong>6</strong><span data-i18n="statCats">카테고리</span></li>
+        <li class="stat"><strong>0</strong><span data-i18n="statInstall">설치할 것</span></li>
       </ul>
     </section>
 
     <section id="apps" class="section wrap" aria-labelledby="apps-title">
-      <span class="tag">모두 토스에서 서비스 중</span>
-      <h2 id="apps-title">만든 앱</h2>
-      <p class="section-lead">카드의 <b>토스에서 보기</b>를 누르면 앱 소개 페이지가 열려요. 휴대폰에서는 거기서 바로 토스 앱으로 들어가요.</p>
+      <span class="tag" data-i18n="appsTag">모두 토스에서 서비스 중</span>
+      <h2 id="apps-title" data-i18n="appsTitle">만든 앱</h2>
+      <p class="section-lead" data-i18n="appsLead">카드의 <b>토스에서 보기</b>를 누르면 앱 소개 페이지가 열려요. 휴대폰에서는 거기서 바로 토스 앱으로 들어가요.</p>
 
       <div class="cards">
         <article class="card" id="app-baro-rate" style="--accent:#bfe3f2">
@@ -82,16 +89,16 @@
             <img class="icon" src="assets/icons/baro-rate.png" alt="바로환율 아이콘" width="72" height="72">
             <div>
               <h3>바로환율</h3>
-              <span class="chip">도구</span>
+              <span class="chip" data-i18n="catTool">도구</span>
             </div>
           </div>
-          <p class="tagline">금액만 넣으면 바로 계산되는 환율</p>
+          <p class="tagline" data-i18n="baro-rate.t">금액만 넣으면 바로 계산되는 환율</p>
           <ul class="features">
-            <li>나라를 고르면 환율과 계산기가 바로 보여요</li>
-            <li>금액을 넣는 즉시 원화와 외화로 계산돼요</li>
-            <li>관심 통화의 환율 변동을 한눈에 봐요</li>
+            <li data-i18n="baro-rate.f1">나라를 고르면 환율과 계산기가 바로 보여요</li>
+            <li data-i18n="baro-rate.f2">금액을 넣는 즉시 원화와 외화로 계산돼요</li>
+            <li data-i18n="baro-rate.f3">관심 통화의 환율 변동을 한눈에 봐요</li>
           </ul>
-          <a class="btn btn-brand card-link" href="https://tossminiapp.com/d/baro-rate" target="_blank" rel="noopener">토스에서 보기 <span aria-hidden="true">→</span><span class="sr">(새 창)</span></a>
+          <a class="btn btn-brand card-link" data-i18n="openToss" href="https://tossminiapp.com/d/baro-rate" target="_blank" rel="noopener">토스에서 보기 <span aria-hidden="true">→</span><span class="sr">(새 창)</span></a>
         </article>
 
         <article class="card" id="app-stock-average" style="--accent:#d9cdf0">
@@ -99,16 +106,16 @@
             <img class="icon" src="assets/icons/stock-average.png" alt="주식평단가자 아이콘" width="72" height="72">
             <div>
               <h3>주식평단가자</h3>
-              <span class="chip">금융</span>
+              <span class="chip" data-i18n="catFinance">금융</span>
             </div>
           </div>
-          <p class="tagline">평단가와 손익을 바로 보는 투자 기록</p>
+          <p class="tagline" data-i18n="stock-average.t">평단가와 손익을 바로 보는 투자 기록</p>
           <ul class="features">
-            <li>매수가와 수량만 넣으면 평단가가 나와요</li>
-            <li>추가로 사면 평단이 어떻게 바뀌는지 미리 봐요</li>
-            <li>여러 종목의 손익을 한 번에 합쳐 봐요</li>
+            <li data-i18n="stock-average.f1">매수가와 수량만 넣으면 평단가가 나와요</li>
+            <li data-i18n="stock-average.f2">추가로 사면 평단이 어떻게 바뀌는지 미리 봐요</li>
+            <li data-i18n="stock-average.f3">여러 종목의 손익을 한 번에 합쳐 봐요</li>
           </ul>
-          <a class="btn btn-brand card-link" href="https://tossminiapp.com/d/stock-average" target="_blank" rel="noopener">토스에서 보기 <span aria-hidden="true">→</span><span class="sr">(새 창)</span></a>
+          <a class="btn btn-brand card-link" data-i18n="openToss" href="https://tossminiapp.com/d/stock-average" target="_blank" rel="noopener">토스에서 보기 <span aria-hidden="true">→</span><span class="sr">(새 창)</span></a>
         </article>
 
         <article class="card" id="app-goodic" style="--accent:#f6e3a7">
@@ -116,16 +123,16 @@
             <img class="icon" src="assets/icons/goodic.png" alt="매일긍정 아이콘" width="72" height="72">
             <div>
               <h3>매일긍정</h3>
-              <span class="chip">교육·학습</span>
+              <span class="chip" data-i18n="catEdu">교육·학습</span>
             </div>
           </div>
-          <p class="tagline">매일 하나씩 만나는 좋은 문장</p>
+          <p class="tagline" data-i18n="goodic.t">매일 하나씩 만나는 좋은 문장</p>
           <ul class="features">
-            <li>하루에 하나, 좋은 문장을 만나요</li>
-            <li>지난 문장은 달력에서 다시 읽어요</li>
-            <li>마음에 든 문장에 반응을 남겨요</li>
+            <li data-i18n="goodic.f1">하루에 하나, 좋은 문장을 만나요</li>
+            <li data-i18n="goodic.f2">지난 문장은 달력에서 다시 읽어요</li>
+            <li data-i18n="goodic.f3">마음에 든 문장에 반응을 남겨요</li>
           </ul>
-          <a class="btn btn-brand card-link" href="https://tossminiapp.com/d/goodic" target="_blank" rel="noopener">토스에서 보기 <span aria-hidden="true">→</span><span class="sr">(새 창)</span></a>
+          <a class="btn btn-brand card-link" data-i18n="openToss" href="https://tossminiapp.com/d/goodic" target="_blank" rel="noopener">토스에서 보기 <span aria-hidden="true">→</span><span class="sr">(새 창)</span></a>
         </article>
 
         <article class="card" id="app-coffee-drip-nyang" style="--accent:#eacdc2">
@@ -133,16 +140,16 @@
             <img class="icon" src="assets/icons/coffee-drip-nyang.png" alt="커피드립냥 아이콘" width="72" height="72">
             <div>
               <h3>커피드립냥</h3>
-              <span class="chip">일상·생활</span>
+              <span class="chip" data-i18n="catLife">일상·생활</span>
             </div>
           </div>
-          <p class="tagline">드리퍼별 핸드드립 레시피</p>
+          <p class="tagline" data-i18n="coffee-drip-nyang.t">드리퍼별 핸드드립 레시피</p>
           <ul class="features">
-            <li>드리퍼와 맛으로 레시피를 찾아요</li>
-            <li>원두 양에 맞춰 물 양을 바꿔 줘요</li>
-            <li>단계별 화면을 보며 따라 내려요</li>
+            <li data-i18n="coffee-drip-nyang.f1">드리퍼와 맛으로 레시피를 찾아요</li>
+            <li data-i18n="coffee-drip-nyang.f2">원두 양에 맞춰 물 양을 바꿔 줘요</li>
+            <li data-i18n="coffee-drip-nyang.f3">단계별 화면을 보며 따라 내려요</li>
           </ul>
-          <a class="btn btn-brand card-link" href="https://tossminiapp.com/d/coffee-drip-nyang" target="_blank" rel="noopener">토스에서 보기 <span aria-hidden="true">→</span><span class="sr">(새 창)</span></a>
+          <a class="btn btn-brand card-link" data-i18n="openToss" href="https://tossminiapp.com/d/coffee-drip-nyang" target="_blank" rel="noopener">토스에서 보기 <span aria-hidden="true">→</span><span class="sr">(새 창)</span></a>
         </article>
 
         <article class="card" id="app-future-self" style="--accent:#c9e8d5">
@@ -150,16 +157,16 @@
             <img class="icon" src="assets/icons/future-self.png" alt="퓨처셀프 아이콘" width="72" height="72">
             <div>
               <h3>퓨처셀프</h3>
-              <span class="chip">교육·학습</span>
+              <span class="chip" data-i18n="catEdu">교육·학습</span>
             </div>
           </div>
-          <p class="tagline">자기계발 영상과 책 요약 모음</p>
+          <p class="tagline" data-i18n="future-self.t">자기계발 영상과 책 요약 모음</p>
           <ul class="features">
-            <li>직접 보고 읽은 영상과 책을 요약해 모아요</li>
-            <li>별점과 태그로 볼 만한 기록을 골라요</li>
-            <li>댓글로 생각을 나눠요</li>
+            <li data-i18n="future-self.f1">직접 보고 읽은 영상과 책을 요약해 모아요</li>
+            <li data-i18n="future-self.f2">별점과 태그로 볼 만한 기록을 골라요</li>
+            <li data-i18n="future-self.f3">댓글로 생각을 나눠요</li>
           </ul>
-          <a class="btn btn-brand card-link" href="https://tossminiapp.com/d/future-self" target="_blank" rel="noopener">토스에서 보기 <span aria-hidden="true">→</span><span class="sr">(새 창)</span></a>
+          <a class="btn btn-brand card-link" data-i18n="openToss" href="https://tossminiapp.com/d/future-self" target="_blank" rel="noopener">토스에서 보기 <span aria-hidden="true">→</span><span class="sr">(새 창)</span></a>
         </article>
 
         <article class="card" id="app-dasibit" style="--accent:#f6e3a7">
@@ -167,16 +174,16 @@
             <img class="icon" src="assets/icons/dasibit.png" alt="다시빛 아이콘" width="72" height="72">
             <div>
               <h3>다시빛</h3>
-              <span class="chip">엔터테인먼트</span>
+              <span class="chip" data-i18n="catEnt">엔터테인먼트</span>
             </div>
           </div>
-          <p class="tagline">다시 찾은 노래와 그 이야기</p>
+          <p class="tagline" data-i18n="dasibit.t">다시 찾은 노래와 그 이야기</p>
           <ul class="features">
-            <li>15년 만에 다시 찾은 데모곡 이야기를 읽어요</li>
-            <li>뮤직비디오로 되살린 노래를 들어요</li>
-            <li>새 노래와 커버 노래도 함께 봐요</li>
+            <li data-i18n="dasibit.f1">15년 만에 다시 찾은 데모곡 이야기를 읽어요</li>
+            <li data-i18n="dasibit.f2">뮤직비디오로 되살린 노래를 들어요</li>
+            <li data-i18n="dasibit.f3">새 노래와 커버 노래도 함께 봐요</li>
           </ul>
-          <a class="btn btn-brand card-link" href="https://tossminiapp.com/d/dasibit" target="_blank" rel="noopener">토스에서 보기 <span aria-hidden="true">→</span><span class="sr">(새 창)</span></a>
+          <a class="btn btn-brand card-link" data-i18n="openToss" href="https://tossminiapp.com/d/dasibit" target="_blank" rel="noopener">토스에서 보기 <span aria-hidden="true">→</span><span class="sr">(새 창)</span></a>
         </article>
 
         <article class="card" id="app-channel-pick" style="--accent:#c9e8d5">
@@ -184,16 +191,16 @@
             <img class="icon" src="assets/icons/channel-pick.png" alt="유튜보드 아이콘" width="72" height="72">
             <div>
               <h3>유튜보드</h3>
-              <span class="chip">엔터테인먼트</span>
+              <span class="chip" data-i18n="catEnt">엔터테인먼트</span>
             </div>
           </div>
-          <p class="tagline">좋아요로 매기는 채널 순위</p>
+          <p class="tagline" data-i18n="channel-pick.t">좋아요로 매기는 채널 순위</p>
           <ul class="features">
-            <li>오늘 볼 만한 영상 한 편을 추천해요</li>
-            <li>사용자 좋아요로 정한 채널 순위를 봐요</li>
-            <li>분야별로 채널과 영상을 찾아요</li>
+            <li data-i18n="channel-pick.f1">오늘 볼 만한 영상 한 편을 추천해요</li>
+            <li data-i18n="channel-pick.f2">사용자 좋아요로 정한 채널 순위를 봐요</li>
+            <li data-i18n="channel-pick.f3">분야별로 채널과 영상을 찾아요</li>
           </ul>
-          <a class="btn btn-brand card-link" href="https://tossminiapp.com/d/channel-pick" target="_blank" rel="noopener">토스에서 보기 <span aria-hidden="true">→</span><span class="sr">(새 창)</span></a>
+          <a class="btn btn-brand card-link" data-i18n="openToss" href="https://tossminiapp.com/d/channel-pick" target="_blank" rel="noopener">토스에서 보기 <span aria-hidden="true">→</span><span class="sr">(새 창)</span></a>
         </article>
 
         <article class="card" id="app-asia-travel" style="--accent:#bfe3f2">
@@ -201,16 +208,16 @@
             <img class="icon" src="assets/icons/asia-travel.png" alt="여행서포트 아이콘" width="72" height="72">
             <div>
               <h3>여행서포트</h3>
-              <span class="chip">여행</span>
+              <span class="chip" data-i18n="catTravel">여행</span>
             </div>
           </div>
-          <p class="tagline">나라별 여행 안내와 주요 도시 소개</p>
+          <p class="tagline" data-i18n="asia-travel.t">나라별 여행 안내와 주요 도시 소개</p>
           <ul class="features">
-            <li>나라별 입국과 환전 안내를 봐요</li>
-            <li>도시마다 맛집, 커피, 쉴 곳을 찾아요</li>
-            <li>장소 정보와 관련 영상을 함께 봐요</li>
+            <li data-i18n="asia-travel.f1">나라별 입국과 환전 안내를 봐요</li>
+            <li data-i18n="asia-travel.f2">도시마다 맛집, 커피, 쉴 곳을 찾아요</li>
+            <li data-i18n="asia-travel.f3">장소 정보와 관련 영상을 함께 봐요</li>
           </ul>
-          <a class="btn btn-brand card-link" href="https://tossminiapp.com/d/asia-travel" target="_blank" rel="noopener">토스에서 보기 <span aria-hidden="true">→</span><span class="sr">(새 창)</span></a>
+          <a class="btn btn-brand card-link" data-i18n="openToss" href="https://tossminiapp.com/d/asia-travel" target="_blank" rel="noopener">토스에서 보기 <span aria-hidden="true">→</span><span class="sr">(새 창)</span></a>
         </article>
 
         <article class="card" id="app-viet-lang" style="--accent:#f2c9c4">
@@ -218,24 +225,24 @@
             <img class="icon" src="assets/icons/viet-lang.png" alt="베트남어 배우기 아이콘" width="72" height="72">
             <div>
               <h3>베트남어 배우기</h3>
-              <span class="chip">교육·학습</span>
+              <span class="chip" data-i18n="catEdu">교육·학습</span>
             </div>
           </div>
-          <p class="tagline">하루 5단어 100일 베트남어</p>
+          <p class="tagline" data-i18n="viet-lang.t">하루 5단어 100일 베트남어</p>
           <ul class="features">
-            <li>100일 동안 매일 한 과씩 배워요</li>
-            <li>듣고 따라 하며 6개 성조를 익혀요</li>
-            <li>단어 500개와 여행 회화를 연습해요</li>
+            <li data-i18n="viet-lang.f1">100일 동안 매일 한 과씩 배워요</li>
+            <li data-i18n="viet-lang.f2">듣고 따라 하며 6개 성조를 익혀요</li>
+            <li data-i18n="viet-lang.f3">단어 500개와 여행 회화를 연습해요</li>
           </ul>
-          <a class="btn btn-brand card-link" href="https://tossminiapp.com/d/viet-lang" target="_blank" rel="noopener">토스에서 보기 <span aria-hidden="true">→</span><span class="sr">(새 창)</span></a>
+          <a class="btn btn-brand card-link" data-i18n="openToss" href="https://tossminiapp.com/d/viet-lang" target="_blank" rel="noopener">토스에서 보기 <span aria-hidden="true">→</span><span class="sr">(새 창)</span></a>
         </article>
       </div>
     </section>
 
     <section id="soon" class="section section-soon wrap" aria-labelledby="soon-title">
-      <span class="tag">곧 만나요</span>
-      <h2 id="soon-title">준비 중인 앱</h2>
-      <p class="section-lead">아직 토스에 출시되지 않은 앱이에요. 출시되면 여기에도 <b>토스에서 보기</b> 링크가 생겨요.</p>
+      <span class="tag" data-i18n="soonTag">곧 만나요</span>
+      <h2 id="soon-title" data-i18n="soonTitle">준비 중인 앱</h2>
+      <p class="section-lead" data-i18n="soonLead">아직 토스에 출시되지 않은 앱이에요. 출시되면 여기에도 <b>토스에서 보기</b> 링크가 생겨요.</p>
 
       <div class="cards">
         <article class="card soon" id="app-camping-car-life" style="--accent:#c9e8d5">
@@ -243,16 +250,16 @@
             <img class="icon" src="assets/icons/camping-car-life.png" alt="캠핑카라이프 아이콘" width="72" height="72">
             <div>
               <h3>캠핑카라이프</h3>
-              <span class="chip">여행</span>
+              <span class="chip" data-i18n="catTravel">여행</span>
             </div>
           </div>
-          <p class="tagline">국내 차박지와 축제를 찾는 캠핑카 여행 정보</p>
+          <p class="tagline" data-i18n="camping-car-life.t">국내 차박지와 축제를 찾는 캠핑카 여행 정보</p>
           <ul class="features">
-            <li>시설 조건으로 차박지와 캠핑장을 찾아요</li>
-            <li>지도에서 지역별 차박지를 한눈에 봐요</li>
-            <li>축제와 그 주변 차박지를 함께 봐요</li>
+            <li data-i18n="camping-car-life.f1">시설 조건으로 차박지와 캠핑장을 찾아요</li>
+            <li data-i18n="camping-car-life.f2">지도에서 지역별 차박지를 한눈에 봐요</li>
+            <li data-i18n="camping-car-life.f3">축제와 그 주변 차박지를 함께 봐요</li>
           </ul>
-          <span class="stamp">준비 중</span>
+          <span class="stamp" data-i18n="soonStamp">준비 중</span>
         </article>
 
         <article class="card soon" id="app-life-rhythm" style="--accent:#d9cdf0">
@@ -260,39 +267,39 @@
             <img class="icon" src="assets/icons/life-rhythm.png" alt="생활 리듬 아이콘" width="72" height="72">
             <div>
               <h3>생활 리듬</h3>
-              <span class="chip">게임</span>
+              <span class="chip" data-i18n="catGame">게임</span>
             </div>
           </div>
-          <p class="tagline">집 안 물건을 두드려 리듬을 따라 치는 게임</p>
+          <p class="tagline" data-i18n="life-rhythm.t">집 안 물건을 두드려 리듬을 따라 치는 게임</p>
           <ul class="features">
-            <li>들려준 2마디 리듬을 그대로 따라 쳐요</li>
-            <li>스위치, 냄비 같은 방식마다 30단계가 있어요</li>
-            <li>인터넷 없이도 할 수 있어요</li>
+            <li data-i18n="life-rhythm.f1">들려준 2마디 리듬을 그대로 따라 쳐요</li>
+            <li data-i18n="life-rhythm.f2">스위치, 냄비 같은 방식마다 30단계가 있어요</li>
+            <li data-i18n="life-rhythm.f3">인터넷 없이도 할 수 있어요</li>
           </ul>
-          <span class="stamp">준비 중</span>
+          <span class="stamp" data-i18n="soonStamp">준비 중</span>
         </article>
       </div>
     </section>
 
     <section id="how" class="section how-band" aria-labelledby="how-title">
       <div class="wrap">
-        <span class="tag">처음이라면</span>
-        <h2 id="how-title">이렇게 열어요</h2>
+        <span class="tag" data-i18n="howTag">처음이라면</span>
+        <h2 id="how-title" data-i18n="howTitle">이렇게 열어요</h2>
         <ol class="steps">
           <li class="step">
             <span class="num" aria-hidden="true">1</span>
-            <h3>토스에서 보기</h3>
-            <p>마음에 드는 앱 카드에서 <b>토스에서 보기</b>를 눌러요.</p>
+            <h3 data-i18n="step1T">토스에서 보기</h3>
+            <p data-i18n="step1P">마음에 드는 앱 카드에서 <b>토스에서 보기</b>를 눌러요.</p>
           </li>
           <li class="step">
             <span class="num" aria-hidden="true">2</span>
-            <h3>토스 앱으로 열기</h3>
-            <p>휴대폰이면 토스 앱으로 바로 들어가요. PC라면 화면의 QR을 휴대폰 카메라로 찍어요.</p>
+            <h3 data-i18n="step2T">토스 앱으로 열기</h3>
+            <p data-i18n="step2P">휴대폰이면 토스 앱으로 바로 들어가요. PC라면 화면의 QR을 휴대폰 카메라로 찍어요.</p>
           </li>
           <li class="step">
             <span class="num" aria-hidden="true">3</span>
-            <h3>바로 쓰기</h3>
-            <p>따로 설치하거나 가입하지 않아도 돼요. 토스 앱 안에서 바로 열려요.</p>
+            <h3 data-i18n="step3T">바로 쓰기</h3>
+            <p data-i18n="step3P">따로 설치하거나 가입하지 않아도 돼요. 토스 앱 안에서 바로 열려요.</p>
           </li>
         </ol>
       </div>
@@ -302,7 +309,7 @@
   <footer class="footer">
     <div class="wrap footer-inner">
       <span class="brand-name">지미니스</span>
-      <p>모든 앱은 토스 앱인토스에서 서비스돼요. 앱 문의는 각 앱 안의 고객센터로 보내 주세요.</p>
+      <p data-i18n="footNote">모든 앱은 토스 앱인토스에서 서비스돼요. 앱 문의는 각 앱 안의 고객센터로 보내 주세요.</p>
       <p class="copy">© 2026 지미니스</p>
     </div>
   </footer>

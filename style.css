@@ -24,6 +24,10 @@
 
   --line: 3px solid var(--ink);
   --hand: "Delius Swash Caps", "Gaegu", cursive;
+  /* Gaegu 한글은 자간을 좁혀야 단어가 붙어 보여요. 다른 언어는 아래에서 되돌려요. */
+  --hand-ls: -0.08em;
+  --hand-ws: 0.15em;
+  --hand-ls-lg: -0.05em;
   --sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
   --ease: cubic-bezier(.25, .46, .45, .94);
 }
@@ -47,6 +51,17 @@ body {
 }
 
 img { display: block; max-width: 100%; }
+
+/* ---------- languages ---------- */
+/* 한국어 밖의 언어는 그 글자가 있는 손글씨 글꼴을 앞에 둬요. 앱 이름(한글)은 Gaegu로 떨어져요. */
+:root:not(:lang(ko)) { --hand-ls: 0; --hand-ws: normal; --hand-ls-lg: 0; }
+:root:lang(ja) { --hand: "Delius Swash Caps", "Yomogi", "Gaegu", cursive; }
+:root:lang(zh-Hant) { --hand: "Delius Swash Caps", "LXGW WenKai TC", "Gaegu", cursive; }
+:root:lang(zh-Hans) { --hand: "Delius Swash Caps", "ZCOOL KuaiLe", "Gaegu", cursive; }
+:root:lang(vi), :root:lang(th) { --hand: "Mali", "Gaegu", cursive; }
+/* keep-all은 띄어쓰기 없는 일본어·중국어 문장을 줄바꿈하지 못해요. */
+:root:lang(ja) body, :root:lang(zh) body { word-break: normal; }
+.card h3, .tile span { word-break: keep-all; }
 
 h1, h2, h3 {
   margin: 0;
@@ -139,7 +154,7 @@ a { color: inherit; }
   word-spacing: 0.15em;
   color: var(--heading);
 }
-.nav { display: flex; gap: 8px; }
+.nav { display: flex; gap: 8px; margin-left: auto; }
 .nav a {
   padding: 6px 12px;
   font-size: 15px;
@@ -150,6 +165,40 @@ a { color: inherit; }
   transition: color .15s var(--ease), background .15s var(--ease);
 }
 .nav a:hover { color: var(--ink); background: var(--paper-2); }
+.lang {
+  position: relative;
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 6px;
+  min-height: 40px;
+  padding: 4px 10px 4px 12px;
+  background: var(--white);
+  border: 2px solid var(--ink);
+  border-radius: var(--r-c);
+  box-shadow: var(--shadow-xs);
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: transform .15s var(--ease), box-shadow .15s var(--ease);
+}
+.lang[hidden] { display: none; }
+.lang:hover { transform: translate(-1px, -1px); box-shadow: var(--shadow-sm); }
+.lang:focus-within { outline: 3px solid var(--sky); outline-offset: 2px; }
+.lang svg { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.lang-globe { width: 18px; height: 18px; }
+.lang-caret { width: 12px; height: 12px; }
+.lang select {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  font-size: 16px;
+  cursor: pointer;
+}
 
 /* ---------- buttons ---------- */
 .btn {
@@ -167,8 +216,8 @@ a { color: inherit; }
   font-family: var(--hand);
   font-weight: 700;
   font-size: 23px;
-  letter-spacing: -0.08em;
-  word-spacing: 0.15em;
+  letter-spacing: var(--hand-ls);
+  word-spacing: var(--hand-ws);
   line-height: 1;
   text-decoration: none;
   transition: transform .15s var(--ease), box-shadow .15s var(--ease);
@@ -188,8 +237,8 @@ a { color: inherit; }
   font-family: var(--hand);
   font-weight: 700;
   font-size: 19px;
-  letter-spacing: -0.08em;
-  word-spacing: 0.15em;
+  letter-spacing: var(--hand-ls);
+  word-spacing: var(--hand-ws);
   transform: rotate(-1.5deg);
 }
 .chip {
@@ -260,8 +309,8 @@ a { color: inherit; }
   font-family: var(--hand);
   font-weight: 700;
   font-size: 19px;
-  letter-spacing: -0.08em;
-  word-spacing: 0.15em;
+  letter-spacing: var(--hand-ls);
+  word-spacing: var(--hand-ws);
 }
 .dot {
   width: 14px; height: 14px;
@@ -346,8 +395,8 @@ a { color: inherit; }
   font-family: var(--hand);
   font-weight: 700;
   font-size: 23px;
-  letter-spacing: -0.08em;
-  word-spacing: 0.15em;
+  letter-spacing: var(--hand-ls);
+  word-spacing: var(--hand-ws);
   color: var(--heading);
 }
 
@@ -470,8 +519,8 @@ a { color: inherit; }
   font-family: var(--hand);
   font-weight: 700;
   font-size: 23px;
-  letter-spacing: -0.08em;
-  word-spacing: 0.15em;
+  letter-spacing: var(--hand-ls);
+  word-spacing: var(--hand-ws);
   line-height: 1.2;
   transform: rotate(-4deg);
 }
@@ -509,7 +558,7 @@ a { color: inherit; }
   font-size: 26px;
   color: var(--ink);
 }
-.step h3 { margin-top: 16px; font-size: 30px; letter-spacing: -0.05em; }
+.step h3 { margin-top: 16px; font-size: 30px; letter-spacing: var(--hand-ls-lg); }
 .step p { margin: 8px 0 0; font-size: 15px; }
 .step b { color: var(--heading); }
 
@@ -530,7 +579,8 @@ a { color: inherit; }
 
 @media (max-width: 560px) {
   .wrap, .topbar-inner { padding-left: 16px; padding-right: 16px; }
-  .nav a { padding: 6px 8px; font-size: 14px; }
+  /* 휴대폰에서는 언어 버튼 자리를 위해 메뉴를 숨겨요. 바로 아래 첫 화면 버튼이 같은 곳으로 가요. */
+  .nav { display: none; }
   .brand-name { font-size: 22px; }
   .lead { font-size: 16px; }
   .board { padding: 16px 12px; transform: none; }
