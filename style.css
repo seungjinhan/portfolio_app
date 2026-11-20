@@ -556,6 +556,8 @@ a { color: inherit; }
 .card-link { align-self: flex-start; }
 /* 웹에서 해보기 문구가 좁은 카드에서도 한 줄에 들어가게 좌우 여백을 줄여요. */
 #games .card-link { padding-left: 16px; padding-right: 16px; }
+.card-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: auto; }
+.card-actions .card-link { padding-left: 16px; padding-right: 16px; }
 
 /* ---------- games & upcoming apps ---------- */
 .section-sub { padding-top: 0; }

@@ -29,6 +29,23 @@
 출시되면 카드를 `#apps`의 카테고리 묶음으로 옮기고 도장을 버튼으로 바꿔요. 준비 중인 앱이 없으면 섹션째 빼요.
 지금은 준비 중인 앱이 없어서 섹션을 뺐어요. 섹션 글 번역(`soonTag`, `soonTitle`, `soonLead`, `soonStamp`)과 스타일(`.card.soon`, `.stamp`)은 남겨 뒀어요.
 
+웹 버전이 있는 앱은 카드 아래 `.card-actions`에 `토스에서 보기`와 `웹에서 보기`(번역 키 `openWeb`)를 함께 둬요.
+
+| 앱 | 웹 주소 |
+|---|---|
+| 바로환율 | https://seungjinhan.github.io/baro-rate/ |
+| 주식평단가자 | https://seungjinhan.github.io/stock-average/ |
+| 매일긍정 | https://seungjinhan.github.io/goodic-web/ |
+| 퓨처셀프 | https://seungjinhan.github.io/futureself-web/ |
+| 베트남어 배우기 | https://seungjinhan.github.io/viet-lang/ |
+| 영어끝내자 | https://seungjinhan.github.io/english-edu-web/ |
+| 커피드립냥 | https://seungjinhan.github.io/coffee-drip-nyang/ |
+| 유튜보드 | https://seungjinhan.github.io/youtube-board/ |
+| 여행서포트 | https://seungjinhan.github.io/asia-travel-web/ |
+| 캠핑카라이프 | https://seungjinhan.github.io/camping-car-life/ |
+
+다시빛은 앱 웹 버전이 아직 없어서 `토스에서 보기`만 있어요.
+
 웹에서 해 볼 수 있는 게임은 `#games`(게임) 섹션에 넣고, `웹에서 해보기` 버튼(번역 키 `playWeb`)으로 웹 게임에 연결해요.
 
 | 게임 | 웹 주소 |
