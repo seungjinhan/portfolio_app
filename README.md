@@ -44,7 +44,7 @@
 | 여행서포트 | https://seungjinhan.github.io/asia-travel-web/ |
 | 캠핑카라이프 | https://seungjinhan.github.io/camping-car-life/ |
 
-다시빛은 앱 웹 버전이 아직 없어서 `토스에서 보기`만 있어요.
+다시빛은 앱 웹 버전 대신 프로젝트 홈페이지 https://seungjinhan.github.io/dasibit_band/ 를 `홈페이지 보기`(번역 키 `openHome`)로 연결해요.
 
 웹에서 해 볼 수 있는 게임은 `#games`(게임) 섹션에 넣고, `웹에서 해보기` 버튼(번역 키 `playWeb`)으로 웹 게임에 연결해요.
 
